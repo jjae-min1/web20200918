@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        .my-menu {
+            display: flex;
+            background-color: green;
+            height: 80px;
+            align-items: center;
+        }
+        .menuitem {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 25px 10px;
+            position: relative;
+        }
+
+        .menuitem:hover {
+            color: black;
+            background-color: white;
+
+        }
+
+        #dummy {
+            flex: 3;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border-top: 5px solid green;
+            padding: 20px;
+
+        }
+
+        .menuitem:hover .submenu{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="my-menu">
+        <div class="menuitem">
+            TUTORIALS <i class="fas fa-caret-down"></i>
+            <div class="submenu">
+                <div class="subitem">Lorem.</div>
+                <div class="subitem">Quidem.</div>
+                <div class="subitem">Fugiat.</div>
+                <div class="subitem">Fuga!</div>
+                <div class="subitem">In!</div>
+            </div>
+        </div>
+        <div class="menuitem">REFERENCES <i class="fas fa-caret-down"></i></div>
+        <div class="menuitem">EXAMPLES <i class="fas fa-caret-down"></i></div>
+        <div class="menuitem">EXERCISEX <i class="fas fa-caret-down"></i></div>
+        <div id="dummy"></div>
+        <div class="menuitem"><i class="fas fa-adjust"></i></div>
+        <div class="menuitem"><i class="fas fa-globe-americas"></i></div>
+        <div class="menuitem"><i class="fas fa-search"></i></div>
+    </div>
+</body>
+</html>
