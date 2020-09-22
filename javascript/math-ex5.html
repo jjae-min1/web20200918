@@ -15,10 +15,10 @@
 </head>
 <body>
     
-    
-    <button id="rock" onclick="rpsGame(this.id)"><i class="fas fa-hand-rock"></i></button>
-    <button id="papper" onclick="rpsGame(this.id)"><i class="fas fa-hand-paper"></i></button>
-    <button id="scissors" onclick="rpsGame(this.id)"><i class="fas fa-hand-scissors"></i></button>
+    <button id=rock onclick="rpsGame1()"><i class="fas fa-hand-rock"></i></button>
+    <button id=papper onclick="rpsGame2()"><i class="fas fa-hand-paper"></i></button>
+    <button id=cissors onclick="rpsGame3()"><i class="fas fa-hand-scissors"></i></button>
+
     <br>
 
     <img src="" alt="" id="computer">
@@ -30,49 +30,53 @@
 
 
     <script>
-        function rpsGame(id){
+        function rpsGame1(){
             var r = Math.floor(Math.random()*3)+1;
             var filename = "rps" + r + ".png";
             document.getElementById('computer').src = filename;
+            
+            if(filename=="rps1.png"){
+                document.getElementById('result').innerHTML = "이겼습니다.";
+            }
+            else if(filename=="rps2.png"){
+                document.getElementById('result').innerHTML = "비겼습니다.";
+            } 
+            else{
+                document.getElementById('result').innerHTML = "졌습니다.";
+            }
+     }
+     
+     function rpsGame2(){
+            var r = Math.floor(Math.random()*3)+1;
+            var filename = "rps" + r + ".png";
+            document.getElementById('computer').src = filename;
+            
+            if(filename=="rps1.png"){
+                document.getElementById('result').innerHTML = "졌습니다.";
+            }
+            else if(filename=="rps2.png"){
+                document.getElementById('result').innerHTML = "이겼습니다.";
+            } 
+            else{
+                document.getElementById('result').innerHTML = "비겼습니다.";
+            }
+     }
 
-            if(id == 'rock' && filename=="rps1.png"){
-                document.getElementById('result').innerHTML = "이겼습니다.";
-                console.log("1");
-            }
-            else if(id == 'rock' && filename == "rps2.png"){
+     function rpsGame3(){
+            var r = Math.floor(Math.random()*3)+1;
+            var filename = "rps" + r + ".png";
+            document.getElementById('computer').src = filename;
+            
+            if(filename=="rps1.png"){
                 document.getElementById('result').innerHTML = "비겼습니다.";
-                console.log("2");
-            }      
-            else if(id == 'rock' && filename == "rps3.png"){
-                document.getElementById('result').innerHTML = "졌습니다.";
-                console.log("3");
             }
-            else if(id=='papper' && filename == "rps1.png"){
+            else if(filename=="rps2.png"){
                 document.getElementById('result').innerHTML = "졌습니다.";
-                console.log('4');
-            }
-            else if(id=='papper'&&filename == "rps2.png"){
+            } 
+            else{
                 document.getElementById('result').innerHTML = "이겼습니다.";
-                console.log('5');
             }
-            else if(id=='papper'&&filename == "rps3.png"){
-                document.getElementById('result').innerHTML = "비겼습니다.";
-                console.log('6');
-            }
-            else if(id=='scissors' && filename == "rps1.png"){
-                document.getElementById('result').innerHTML = "비겼습니다.";
-                console.log('7');
-            }
-            else if(id=='scissors'&&filename == "rps2.png"){
-                document.getElementById('result').innerHTML = "졌습니다.";
-                console.log('8');
-            }
-            else if(id=='scissors'&&filename == "rps3.png"){
-                document.getElementById('result').innerHTML = "이겼습니다.";
-                console.log('9');
-            }
-        }
-   
+     }
     </script>
 </body>
 </html>

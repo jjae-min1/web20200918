@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <input type="number" id="input1">
+    <br>
+    <input type="number" id="input2">
+    <br>
+    <button onclick="showABS()">두 값의 차이</button>
+    <p id="result"></p>
+    <script>
+        function showABS() {
+            var n1 = document.getElementById('input1').value;
+            var n2 = document.getElementById('input2').value;
+            
+            var result = n1 - n2;
+            var result2 = Math.abs(result);
+            
+            document.getElementById('result').innerHTML = result2;
+        }
+    </script>
+</body>
+</html>
