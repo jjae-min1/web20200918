@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <h1 id="head1" class="note">Lorem.</h1>
+    <h1 id="head2" class="note error">Odio.</h1>
+    <h1 id="head3" class="note error">Eos?</h1>
+    <h1 id="head4">Fuga!</h1>
+    <h1 id="head5">Distinctio.</h1>
+    <script>
+        var heads = document.querySelectorAll("h1");
+        console.log(heads.length);
+        
+        var notes = document.querySelectorAll(".note");
+
+        var ne = document.querySelectorAll(".note.error");
+
+        console.log(ne.length);
+        
+
+        for(var i = 0; i < ne.length; i++){
+            ne[i].innerHTML = "Hello";
+        }
+    </script>
+</body>
+</html>

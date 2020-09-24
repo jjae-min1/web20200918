@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <select name="" id="grade" onchange="show()">  <!-- onchange : 변경될 떄 마다 적용되는 어트리뷰트 -->
+        <option value="d">등급선택하기</option>
+        <option value="a">A등급</option>
+        <option value="b">B등급</option>
+        <option value="c">C등급</option>
+    </select>
+    <br>
+
+    <p id="result"></p>
+
+
+    <script>
+        function show() {
+            var grade = document.getElementById('grade').value;
+
+            var txt;
+
+            switch(grade){
+                case "a":
+                    txt = "90점 이상입니다."
+                    console.log('a');
+                    break;
+                case "b":
+                    txt = "80점 이상입니다."
+                    console.log('b');
+                    break;
+                case "c":
+                    txt = "70점 이상입니다."
+                    console.log('c');
+                    break;
+                default:
+                    txt = "등급을선택하세요."
+            }
+
+            document.getElementById('result').innerHTML= txt;
+        }
+    </script>
+</body>
+</html>

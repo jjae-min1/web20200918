@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <button onclick="lotto()"></button>
+    <p id="result"></p>
+    <script>
+        function lotto(){
+            var numbers = [];
+
+            for(var i = 0; i < 6; i++){
+                var newNumber = Math.floor(Math.random()*45)+1; 
+                if (!numbers.includes(newNumber)){
+                numbers.push(newNumber);
+                }
+
+            }
+
+            var txt = "";
+            for(var i = 0; i < numbers.length;i++){
+                txt += "<p>" + numbers[i] + "</p>";
+            }
+            document.getElementById('result').innerHTML = txt;
+        }
+    </script>
+</body>
+</html>

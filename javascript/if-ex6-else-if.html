@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <input type="number" id="score"><br>
+    <button onclick="show()">등급 확인</button>
+    <p id="result"></p>
+
+    <script>
+        function show() {
+            var num1 = document.getElementById('score').value;
+            num1 = Number(num1);
+            var txt;
+
+            if (num1 >= 90){
+                txt = "A등급입니다.";
+            } else if(num1 >=80){
+                txt = "B등급입니다.";
+            } else if(num1 >=70){
+                txt = "C등급입니다.";
+            } else{
+                txt = "D등급입니다.";
+            }
+
+
+
+            document.getElementById('result').innerHTML = txt;
+        }
+    </script>
+</body>
+</html>

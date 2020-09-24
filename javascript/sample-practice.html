@@ -8,21 +8,21 @@
 <body>
 <p id="result"></p>
     <script>
+         for(var i = 1; i <= 5; i++){
+                        
+                        for(var j = 5; j >=1; j--){
+                            if(i < j){
+                                txt += "&nbsp;";
+                            }else{
+                                txt += "*";
+                            }
         
-        var txt = "";
-           for(var i = 1; i <= 5; i++){
-                
-                for(var j = 1; j <= 5; j++){
-                    if(i >= j){
-                        txt += "*";
+                            
+                        }
+                        txt += "<br>";
+                        
                     }
-
-                   
-                }
-                txt += "<br>";
-            }
-            document.getElementById('result').innerHTML = txt;
-
+                    document.getElementById('result').innerHTML = txt;
 
     </script>
 </body>
@@ -39,39 +39,38 @@
 
 
 
-        <!-- // var txt = ""
-         for(var i = 1; i <= 5; i++){
-             for(var j = 1; j <= 5; j++){
-                 txt +="*";
+            <!-- var txt = ""
+                for(var i = 1; i <= 5; i++){
+                    for(var j = 1; j <= 5; j++){
+                        txt +="*";
 
-                 if(j == 5){
-                     txt+='<br>';
-                 }
-                 document.getElementById('result').innerHTML = txt;
-             }
-         }
+                        
+                        }
+                        txt += "<br>";
+                    
+                    }
 
-        // console.log("*****") -->
+                document.getElementById('result').innerHTML = txt;
+                // console.log("*****")  -->
 
  
 
 
-        <!-- var txt = "";
-        for(var i = 1; i <= 5; i++){
-             
-             for(var j = 1; j <= 5; j++){
-                 if(i >= j){
-                     txt += "*";
-                 }
-
-                 if(j==5){
-                     txt+= "<br>";
-                 }
-             }
-             
-         }
-         document.getElementById('result').innerHTML = txt;
-         //colsole.log("*한개씩 증가") -->
+                <!-- var txt = "";
+                for(var i = 1; i <= 5; i++){
+                     for(var j = 1; j <= 5; j++){
+                         if(i >= j){
+                             txt += "*";
+                         }
+        
+                         
+                         }
+                         txt += "<br>";
+                     }
+                     
+                 
+                 document.getElementById('result').innerHTML = txt;
+                 //colsole.log("*한개씩 증가") -->
 
 
 
@@ -84,11 +83,10 @@
                       txt += "*";
                   }
 
-                  if(j==5){
-                      txt+= "<br>";
-                  }
+                  
+                  
               }
-              
+              txt += "<br>";
           }
           document.getElementById('result').innerHTML = txt;
           console.log("*한개씩 감소") -->
@@ -107,12 +105,12 @@
                         txt +="#";
                     }
 
-                    if(j==5){
-                        txt+= "<br>";
+                    
                     }
+                    txt += "<br>";
                 }
                 
-            }
+            
             document.getElementById('result').innerHTML = txt;
             //console.log("*과# 조합") -->
 
@@ -127,19 +125,16 @@
                         txt += "*";
                     }
 
-                    if(j==5){
-                        txt+= "<br>";
-                    }
+                    
                 }
-                
+                txt += "<br>";
             }
             document.getElementById('result').innerHTML = txt;
             //console.log("*과# 조합 2") -->
 
-<!-- 
-            <p id="result"></p>
-            <script>
-                var txt = "";
+
+            
+            <!--var txt = "";
                     for(var i = 1; i <= 5; i++){
                         
                         for(var j = 1; j <= 5; j++){
@@ -149,11 +144,10 @@
                                 txt += "*";
                             }
         
-                            if(j==5){
-                                txt+= "<br>";
-                            }
+                            
+                            
                         }
-                        
+                        txt += "<br>";
                     }
                     document.getElementById('result').innerHTML = txt;
                     //console.log("오른쪽붙은별1") -->
@@ -170,10 +164,9 @@
                                 txt += "*";
                             }
         
-                            if(j==1){
-                                txt+= "<br>";
-                            }
+                            
                         }
+                        txt += "<br>";
                         
                     }
                     document.getElementById('result').innerHTML = txt;
@@ -186,13 +179,11 @@
                 <!-- var txt = "";
                 for(var i = 1; i <= 5; i++){
                 
-                for(var j = 0; j < 5; j++){
-                   txt += j ; 
-                   if(j == 4){
-                    txt += "<br>"
-                   }
+                    for(var j = 0; j < 5; j++){
+                        txt += j ; 
+                      
                 }
-                
+                txt += "<br>"
             }
             document.getElementById('result').innerHTML = txt;
             //console.log("01234") -->
@@ -207,11 +198,9 @@
                 
                     for(var k = 0; k < 5; k ++){
                         txt += i+k;
-                        if(k==4){
-                            txt += "<br>";
-                        }
+                        
                     }
-                   
+                   txt += "<br>";
                 }
                 
                   
@@ -228,11 +217,10 @@
                    if(i>=j){
                     txt += j;
                    }
-                    if(j==4){
-                        txt+="<br>";
-                    }
+                    
                    
                 }
+                txt += "<br>"''
                 
             }
             document.getElementById('result').innerHTML = txt;
@@ -246,7 +234,7 @@
             for(var i = 0; i < 5; i++){
                 for(var j = 0; j <=i; j++){
                     txt += count%10;
-                    count++
+                    count++;
                     
              }
              txt += "<br>";
